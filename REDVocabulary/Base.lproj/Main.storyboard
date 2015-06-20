@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="REDVocabulary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="qIq-FQ-THk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4eX-nb-4W9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="DE4-D9-1EO" kind="embed" id="rQS-Rg-JKM"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qIq-FQ-THk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2vT-4S-CDD"/>
+                            <constraint firstAttribute="centerX" secondItem="4eX-nb-4W9" secondAttribute="centerX" id="332-iZ-czC"/>
+                            <constraint firstAttribute="centerY" secondItem="4eX-nb-4W9" secondAttribute="centerY" id="K5B-a6-aHD"/>
+                            <constraint firstAttribute="centerY" secondItem="qIq-FQ-THk" secondAttribute="centerY" id="KnK-Er-gWY"/>
+                            <constraint firstItem="4eX-nb-4W9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Q2o-vg-YJo"/>
+                            <constraint firstAttribute="centerX" secondItem="qIq-FQ-THk" secondAttribute="centerX" id="VZM-Ia-zOV"/>
+                            <constraint firstItem="qIq-FQ-THk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="bCw-wo-4h9"/>
+                            <constraint firstItem="4eX-nb-4W9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="eb2-0m-6cc"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344" y="415"/>
+        </scene>
+        <!--Select Language View Controller-->
+        <scene sceneID="UZU-jf-eMj">
+            <objects>
+                <viewController id="DE4-D9-1EO" customClass="REDSelectLanguageViewController" customModule="REDVocabulary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SFx-G0-8nB"/>
+                        <viewControllerLayoutGuide type="bottom" id="r8A-AG-bXE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8yf-or-4UN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vAN-Db-knn">
+                                <rect key="frame" x="0.0" y="136" width="320" height="162"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awt-UF-kcH" userLabel="Plus button" customClass="REDBasicButton" customModule="REDVocabulary" customModuleProvider="target">
+                                <rect key="frame" x="258" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="EbW-Jt-pPR"/>
+                                    <constraint firstAttribute="height" constant="30" id="OoN-FQ-gcK"/>
+                                </constraints>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPlus:" destination="DE4-D9-1EO" eventType="touchUpInside" id="zVp-RF-WzJ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DY8-CZ-XHc" userLabel="AddLngView">
+                                <rect key="frame" x="28" y="151" width="265" height="178"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Language 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ThB-lh-Ol0">
+                                        <rect key="frame" x="39" y="100" width="181" height="30"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYt-ax-w4f" userLabel="Ok Button">
+                                        <rect key="frame" x="60" y="140" width="46" height="30"/>
+                                        <state key="normal" title="Ok">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSave:" destination="DE4-D9-1EO" eventType="touchUpInside" id="KSo-gE-nKH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9o-wa-eJn" userLabel="Cancel Button">
+                                        <rect key="frame" x="155" y="140" width="65" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onCancel:" destination="DE4-D9-1EO" eventType="touchUpInside" id="fom-LM-rVb"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Language 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4gI-BF-P9M">
+                                        <rect key="frame" x="39" y="46" width="181" height="30"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.12841455419580419" alpha="0.85999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="GwQ-bE-mUd"/>
+                                    <constraint firstAttribute="width" constant="265" id="f5G-nN-YcJ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BS7-pB-DFw" userLabel="Start button" customClass="REDBasicButton" customModule="REDVocabulary" customModuleProvider="target">
+                                <rect key="frame" x="98" y="337" width="124" height="37"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="j5h-Kn-OxF" kind="show" id="Rc6-zu-jbh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Awt-UF-kcH" firstAttribute="top" secondItem="SFx-G0-8nB" secondAttribute="bottom" constant="20" id="5Nj-xh-7eR"/>
+                            <constraint firstAttribute="centerX" secondItem="DY8-CZ-XHc" secondAttribute="centerX" constant="-0.5" id="7fc-3E-cpJ"/>
+                            <constraint firstItem="Awt-UF-kcH" firstAttribute="trailing" secondItem="8yf-or-4UN" secondAttribute="trailingMargin" id="ML2-8L-Dkm"/>
+                            <constraint firstAttribute="centerX" secondItem="BS7-pB-DFw" secondAttribute="centerX" id="UeZ-V9-Q4z"/>
+                            <constraint firstAttribute="centerY" secondItem="BS7-pB-DFw" secondAttribute="centerY" constant="-115.5" id="X7q-ln-4t6"/>
+                            <constraint firstItem="BS7-pB-DFw" firstAttribute="top" secondItem="vAN-Db-knn" secondAttribute="bottom" constant="39" id="hFG-RU-tWF"/>
+                            <constraint firstAttribute="centerY" secondItem="DY8-CZ-XHc" secondAttribute="centerY" id="ree-bA-6I8"/>
+                            <constraint firstAttribute="centerY" secondItem="vAN-Db-knn" secondAttribute="centerY" constant="23" id="ulJ-Xv-wst"/>
+                            <constraint firstAttribute="centerX" secondItem="vAN-Db-knn" secondAttribute="centerX" id="xuj-zr-Nyw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aIJ-fw-XOt"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="addLngButton" destination="Awt-UF-kcH" id="fIz-al-v5S"/>
+                        <outlet property="addLngView" destination="DY8-CZ-XHc" id="Q7P-yV-r0J"/>
+                        <outlet property="cancelLngButton" destination="z9o-wa-eJn" id="BdZ-aH-w1I"/>
+                        <outlet property="createLngButton" destination="GYt-ax-w4f" id="Pjz-Pz-Yut"/>
+                        <outlet property="lng1TextField" destination="4gI-BF-P9M" id="6if-7y-o5g"/>
+                        <outlet property="lng2TextField" destination="ThB-lh-Ol0" id="5NS-xe-gSK"/>
+                        <outlet property="lngPicker" destination="vAN-Db-knn" id="DoU-8q-Dkc"/>
+                        <outlet property="startButton" destination="BS7-pB-DFw" id="JqY-ki-G5R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KWM-zE-gwj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="415"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="auu-SC-f4J">
+            <objects>
+                <viewController id="j5h-Kn-OxF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TAN-MN-8y9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y1G-4u-gsr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tv3-cA-Rt3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nAy-Lv-Y33">
+                                <rect key="frame" x="79" y="109" width="162" height="262"/>
+                                <color key="backgroundColor" red="1" green="0.051191160530000002" blue="0.17020857489999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JbG-oh-IMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142" y="415"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background.png" width="1024" height="768"/>
+    </resources>
+</document>
